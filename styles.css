@@ -199,26 +199,34 @@ span {
 
     #top-bar {
         padding: 0 12px;
-        justify-content: space-between;
+        justify-content: center; /* keeps title centered */
+        gap: 10px;
+        position: sticky;
     }
 
     #top-bar h1 {
         font-size: 18px;
+        flex: none;
     }
 
     #settings-button {
         font-size: 20px;
         padding: 0 6px;
+        position: absolute;
+        right: 12px;
     }
 
     #bottom-bar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px;
+        flex-direction: row; /* keep buttons horizontal */
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 14px;
         border-radius: 20px;
-        width: 90%;
-        left: 5%;
-        transform: none;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #add-button,
