@@ -1,5 +1,5 @@
 const statuses = ["unchecked", "half-done", "full"]
-let downloadOnSave = false;
+let downloadOnSave = JSON.parse(localStorage.getItem("downloadOnSave")) || false;
 
 const boxData = []
 
@@ -130,6 +130,7 @@ document.getElementById("settings-button").addEventListener("click", () => {
 });
 
 document.getElementById("download-toggle").addEventListener("change", (e) => {
+    downloadOnSave = e.target.checked;
     localStorage.setItem("downloadOnSave", e.target.checked);
 })
 
